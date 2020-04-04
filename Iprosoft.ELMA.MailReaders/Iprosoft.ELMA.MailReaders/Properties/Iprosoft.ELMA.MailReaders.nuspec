@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$id$</id>
+    <title>Mail</title>
+    <version>$version$</version>
+    <description>Почтавик</description>
+    <authors>Iprosoft</authors>
+    <tags>[Type:Module] [Priority:100]</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\$id$.*" exclude="bin\$id$.pdb" target="lib\net40" />
+    <file src="**\*.*" exclude="bin\**\*.*;obj\**\*.*" target="src" />
+  </files>
+</package>

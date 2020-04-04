@@ -1,0 +1,10 @@
+﻿@model Iprosoft.ELMA.MailReaders.MailReadersSettings
+
+@using (Html.TableForm(v => v.ViewType(EleWise.ELMA.Model.Views.ViewType.Edit).Attributes(a => a.@class = "settings_table")))
+{
+    @Html.EditableProperty(m => m.SMTP)
+    @Html.EditableProperty(m => m.SMTPport)
+    @Html.EditableProperty(m => m.Login)
+    @Html.EditableProperty(m => m.Password)
+    @Html.EditableProperty(m => m.MailProcess)
+}

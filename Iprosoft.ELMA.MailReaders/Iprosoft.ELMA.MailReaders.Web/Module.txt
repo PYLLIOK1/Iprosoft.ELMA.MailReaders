@@ -1,0 +1,15 @@
+﻿Name: Iprosoft.ELMA.MailReaders.Web
+Module: Iprosoft.ELMA.MailReaders
+AntiForgery: disabled
+DisplayName: Модуль почтавик
+Author: OOO "Информпроект"
+Website: http://www.elma-bpm.ru
+Version: 3.0.0
+OrchardVersion: 1.0.20
+Description: Модуль анализа почты
+Features:
+    Iprosoft.ELMA.MailReaders.Web:
+        Name: Iprosoft.ELMA.MailReaders.Web
+        Description: Mail
+        Category: Mail
+        Dependencies: EleWise.ELMA.BPM.Web.Content, EleWise.ELMA.BPM.Web.Common

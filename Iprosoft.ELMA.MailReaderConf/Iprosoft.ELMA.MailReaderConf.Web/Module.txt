@@ -1,0 +1,15 @@
+﻿Name: Iprosoft.ELMA.MailReaderConf.Web
+Module: Iprosoft.ELMA.MailReaderConf
+AntiForgery: disabled
+DisplayName: МуModule
+Author: My Company
+Website: http://www.elma-bpm.ru
+Version: 3.0.0
+OrchardVersion: 1.0.20
+Description: My ELMA3 Module
+Features:
+    Iprosoft.ELMA.MailReaderConf.Web:
+        Name: Iprosoft.ELMA.MailReaderConf.Web
+        Description: My ELMA3 Module
+        Category: My ELMA Modules
+        Dependencies: EleWise.ELMA.BPM.Web.Content, EleWise.ELMA.BPM.Web.Common

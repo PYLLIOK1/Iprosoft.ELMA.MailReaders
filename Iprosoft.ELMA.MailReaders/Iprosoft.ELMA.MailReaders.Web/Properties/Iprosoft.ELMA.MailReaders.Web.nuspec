@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$id$</id>
+    <title>My ELMA3 Web Module</title>
+    <version>$version$</version>
+    <description>Почтавик</description>
+    <authors>Iprosoft</authors>
+    <tags>[OwnerId:Iprosoft.ELMA.MailReaders] [Component:Web]</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+</package>

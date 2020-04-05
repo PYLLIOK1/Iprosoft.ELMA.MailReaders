@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormViewItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Form</Name>
+  <Uid>31692e31-47ff-47e3-af60-336de03d092a</Uid>
+  <Items>
+    <RootViewItem xsi:type="ColumnsLayoutViewItem">
+      <Name>ColumnsLayout1</Name>
+      <Uid>61e01ea4-c21a-4990-a5c1-1178eef77c03</Uid>
+      <Items>
+        <RootViewItem xsi:type="ColumnViewItem">
+          <Name>Column1</Name>
+          <Uid>ccde8ca1-edf2-47a2-918c-d2b56ea643f2</Uid>
+          <Items>
+            <RootViewItem xsi:type="PropertyViewItem">
+              <Name>Property1</Name>
+              <Uid>a1602530-5a85-449a-9e46-46bc952d23db</Uid>
+              <Property>d8b25adc-a344-41e1-8764-52c2dfd468de</Property>
+              <Attributes />
+            </RootViewItem>
+            <RootViewItem xsi:type="PropertyViewItem">
+              <Name>Property2</Name>
+              <Uid>4412de7f-c7a8-4be5-83cd-ebc0b56fbcdc</Uid>
+              <Property>9cfebdbc-7433-436d-955c-28039439cd59</Property>
+              <Attributes />
+            </RootViewItem>
+            <RootViewItem xsi:type="PropertyViewItem">
+              <Name>Property3</Name>
+              <Uid>5c6e26c3-947a-4fe1-ab81-e2b987d334e3</Uid>
+              <Property>452b64cc-16b6-4c03-aefa-e8a3fe28b173</Property>
+              <Attributes />
+              <TypeSettings>
+                <item key="HideCreator">
+                  <anyType xsi:type="xsd:boolean">true</anyType>
+                </item>
+              </TypeSettings>
+            </RootViewItem>
+            <RootViewItem xsi:type="PropertyViewItem">
+              <Name>Property6</Name>
+              <Uid>82818460-2408-445d-8f58-6bf891c9577d</Uid>
+              <Property>f19d4133-ce78-47e5-81b4-cd45553a8184</Property>
+              <Attributes />
+              <TypeSettings>
+                <item key="HideCreator">
+                  <anyType xsi:type="xsd:boolean">true</anyType>
+                </item>
+              </TypeSettings>
+            </RootViewItem>
+          </Items>
+        </RootViewItem>
+      </Items>
+    </RootViewItem>
+  </Items>
+  <DisplayName>Создание</DisplayName>
+</FormViewItem>

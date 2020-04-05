@@ -2,8 +2,8 @@
 
 @using (Html.TableForm(v => v.ViewType(EleWise.ELMA.Model.Views.ViewType.Display).Attributes(a => a.@class = "settings_table")))
 {
-    @Html.Property(m => m.SMTP)
-    @Html.Property(m => m.SMTPport)
+    @Html.Property(m => m.IMAP)
+    @Html.Property(m => m.IMAPport)
     @Html.Property(m => m.Login)
     @Html.Property(m => m.MailProcess)
 }

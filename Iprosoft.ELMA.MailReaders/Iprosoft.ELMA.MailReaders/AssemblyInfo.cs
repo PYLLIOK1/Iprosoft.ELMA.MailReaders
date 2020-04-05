@@ -1,6 +1,7 @@
 [assembly: System.Runtime.InteropServices.Guid("ae337f3f-7dd0-4c49-9046-2c492922e205")]
 [assembly: System.Runtime.InteropServices.ComVisible(false)]
 [assembly: System.Reflection.AssemblyTitle("Iprosoft.ELMA.MailReaders")]
+[assembly: System.Reflection.AssemblyDescription("Iprosoft.ELMA.MailReaders")]
 [assembly: EleWise.ELMA.ComponentModel.ComponentAssembly()]
 [assembly: EleWise.ELMA.Model.Attributes.ModelAssembly()]
 
@@ -11,6 +12,7 @@ namespace Iprosoft.ELMA.MailReaders
     
     [global::EleWise.ELMA.Model.Attributes.MetadataType(typeof(global::EleWise.ELMA.Model.Metadata.AssemblyInfoMetadata))]
     [global::EleWise.ELMA.Model.Attributes.Uid("ae337f3f-7dd0-4c49-9046-2c492922e205")]
+    [global::EleWise.ELMA.Model.Attributes.AssemblySummary(typeof(@__Resources__AssemblyInfo), "Summary")]
     internal class @__AssemblyInfo
     {
         
@@ -37,6 +39,22 @@ namespace Iprosoft.ELMA.MailReaders
     {
         
         public static string DisplayName
+        {
+            get
+            {
+                return global::EleWise.ELMA.SR.T("Iprosoft.ELMA.MailReaders");
+            }
+        }
+        
+        public static string Description
+        {
+            get
+            {
+                return global::EleWise.ELMA.SR.T("Iprosoft.ELMA.MailReaders");
+            }
+        }
+        
+        public static string Summary
         {
             get
             {

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormViewItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Form</Name>
+  <Uid>e2ea92ca-102e-4f56-80dd-7da212efc216</Uid>
+  <Items>
+    <RootViewItem xsi:type="ColumnsLayoutViewItem">
+      <Name>ColumnsLayout1</Name>
+      <Uid>ce5a42a3-2371-4e45-802a-37db8b5a493e</Uid>
+      <Items>
+        <RootViewItem xsi:type="ColumnViewItem">
+          <Name>Column1</Name>
+          <Uid>2651539b-6d2b-4705-923e-eddc01954df9</Uid>
+          <Items>
+            <RootViewItem xsi:type="PropertyViewItem">
+              <Name>Property1</Name>
+              <Uid>e8413370-6511-45a0-89d4-abe94378b212</Uid>
+              <Property>1a2c3b3f-22f7-46db-93e2-218dfdac60c4</Property>
+              <Attributes />
+            </RootViewItem>
+            <RootViewItem xsi:type="PropertyViewItem">
+              <Name>Property2</Name>
+              <Uid>cb917ad1-c842-4cda-a504-88a42657ffc1</Uid>
+              <Property>9f11e44a-182c-494a-b92a-10e92b2c47bd</Property>
+              <Attributes />
+            </RootViewItem>
+            <RootViewItem xsi:type="PropertyViewItem">
+              <Name>Property3</Name>
+              <Uid>3d42a611-4472-4d19-9991-a5cd7d1fc883</Uid>
+              <Property>8f7d2515-666e-45d5-bb3f-4ec0d2717550</Property>
+              <Attributes />
+            </RootViewItem>
+            <RootViewItem xsi:type="PropertyViewItem">
+              <Name>Property4</Name>
+              <Uid>4bb51df9-7cf8-43f9-8244-b1709e311846</Uid>
+              <Property>5e2c97a5-0750-4962-84e3-b708cc3816df</Property>
+              <Attributes />
+            </RootViewItem>
+            <RootViewItem xsi:type="PropertyViewItem">
+              <Name>Property5</Name>
+              <Uid>7989735c-3f17-4d1d-8f07-ff11949c63d8</Uid>
+              <Property>ace29bdd-0b0d-4f68-8844-31e89d0bf968</Property>
+              <Attributes />
+            </RootViewItem>
+            <RootViewItem xsi:type="PropertyViewItem">
+              <Name>Property6</Name>
+              <Uid>74cb8e1c-4c5d-4a62-a197-c7d2c09574db</Uid>
+              <Property>d27d3e5c-2173-4c2d-847f-259a498db8d0</Property>
+              <Attributes />
+            </RootViewItem>
+          </Items>
+        </RootViewItem>
+      </Items>
+    </RootViewItem>
+  </Items>
+  <DisplayName>Создание\Редактирование</DisplayName>
+</FormViewItem>

@@ -34,8 +34,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="EleWise.ELMA.SDK">
-      <HintPath>C:\ELMA3-Standart\Designer\EleWise.ELMA.SDK.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\program files (x86)\microsoft visual studio\2019\community\common7\ide\extensions\wsmd54yb.dqu\EleWise.ELMA.SDK.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EleWise.ELMA.SDK.Web">
+      <HintPath>..\..\..\..\..\..\..\ELMA3-Standart\Designer\EleWise.ELMA.SDK.Web.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="EleWise.ELMA.Workflow">
@@ -46,10 +53,18 @@
       <HintPath>C:\ELMA3-Standart\Designer\Iesi.Collections.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="MailKit, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MailKit.2.0.0\lib\net45\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MimeKit.2.0.0\lib\net45\MimeKit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +76,7 @@
       <Generator>MDCodeGenerator</Generator>
       <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Iprosoft.ELMA.MailReaders.nuspec" />
   </ItemGroup>
   <ItemGroup>
@@ -72,13 +88,20 @@
     <Compile Include="MailReadersSettings.cs" />
     <Compile Include="MailReadersSettingsModule.cs" />
     <Compile Include="ProjectAssemblyInfo.cs" />
+    <Compile Include="Services\IMailReadersService.cs" />
+    <Compile Include="Services\Impl\MailReadersService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Components\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Managers\" />
     <Folder Include="Models\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Iprosoft.ELMA.MailReaderConf\Iprosoft.ELMA.MailReaderConf\Iprosoft.ELMA.MailReaderConf.csproj">
+      <Project>{238270FD-67E3-4352-B440-2FB185C12C48}</Project>
+      <Name>Iprosoft.ELMA.MailReaderConf</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

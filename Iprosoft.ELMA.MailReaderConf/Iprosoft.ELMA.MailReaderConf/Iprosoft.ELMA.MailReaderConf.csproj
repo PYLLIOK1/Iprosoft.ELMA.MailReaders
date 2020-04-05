@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EleWise.ELMA.SDK">
-      <HintPath>C:\ELMA3-Standart\Designer\EleWise.ELMA.SDK.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\program files (x86)\microsoft visual studio\2017\professional\common7\ide\extensions\sf2jo0vz.kto\EleWise.ELMA.SDK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="EleWise.ELMA.Security">
@@ -61,9 +61,13 @@
       <Generator>MDCodeGenerator</Generator>
       <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
     </None>
-    <None Include="Models\MailRequest.md">
+    <None Include="Models\EMailMessageI.md">
       <Generator>MDCodeGenerator</Generator>
-      <LastGenOutput>MailRequest.cs</LastGenOutput>
+      <LastGenOutput>EMailMessageI.cs</LastGenOutput>
+    </None>
+    <None Include="Models\MailRequestI.md">
+      <Generator>MDCodeGenerator</Generator>
+      <LastGenOutput>MailRequestI.cs</LastGenOutput>
     </None>
     <None Include="Properties\Iprosoft.ELMA.MailReaderConf.nuspec" />
   </ItemGroup>
@@ -73,10 +77,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyInfo.md</DependentUpon>
     </Compile>
-    <Compile Include="Models\MailRequest.cs">
+    <Compile Include="Models\EMailMessageI.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MailRequest.md</DependentUpon>
+      <DependentUpon>EMailMessageI.md</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MailRequestI.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MailRequestI.md</DependentUpon>
     </Compile>
     <Compile Include="ProjectAssemblyInfo.cs" />
   </ItemGroup>
@@ -85,6 +94,29 @@
     <Folder Include="Exceptions\" />
     <Folder Include="Managers\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Models\MailRequestI.Form.Form.xml">
+      <DependentUpon>MailRequestI.md</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Models\MailRequestI.Form.Form1.xml">
+      <DependentUpon>MailRequestI.md</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Models\EMailMessageI.Form.Form.xml">
+      <DependentUpon>EMailMessageI.md</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Models\EMailMessageI.Form.Form1.xml">
+      <DependentUpon>EMailMessageI.md</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

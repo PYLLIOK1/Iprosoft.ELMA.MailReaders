@@ -7,11 +7,11 @@ namespace Iprosoft.ELMA.MailReaders
 {
     public class MailReadersSettings : GlobalSettingsBase
     {
-        [DisplayName("SMTP Сервер")]
-        public string SMTP { get; set; }
+        [DisplayName("IMAP сервер")]
+        public string IMAP { get; set; }
 
-        [DisplayName("SMTP порт")]
-        public string SMTPport { get; set; }
+        [DisplayName("IMAP порт")]
+        public int IMAPport { get; set; }
 
         [DisplayName("Логин")]
         public string Login { get; set; }

@@ -51,40 +51,39 @@
       <HintPath>C:\ELMA3-Standart\Web\bin\Autofac.Integration.Web.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="EleWise.ELMA.Barcode, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\ELMA3-Standart\Designer\EleWise.ELMA.Barcode.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="EleWise.ELMA.BPM">
-      <HintPath>C:\ELMA3-Standart\Web\bin\EleWise.ELMA.BPM.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\ELMA3-Standart\Web\bin\EleWise.ELMA.BPM.dll</HintPath>
+    </Reference>
+    <Reference Include="EleWise.ELMA.BPM.Web">
+      <HintPath>..\..\..\..\..\..\..\ELMA3-Standart\Web\bin\EleWise.ELMA.BPM.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="EleWise.ELMA.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\ELMA3-Standart\Designer\EleWise.ELMA.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="EleWise.ELMA.BPM.Web.Common">
-      <HintPath>C:\ELMA3-Standart\Web\Modules\EleWise.ELMA.BPM.Web.Common\bin\EleWise.ELMA.BPM.Web.Common.dll</HintPath>
+    <Reference Include="EleWise.ELMA.Content, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\ELMA3-Standart\Designer\EleWise.ELMA.Content.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="EleWise.ELMA.BPM.Web.Content">
-      <HintPath>C:\ELMA3-Standart\Web\Modules\EleWise.ELMA.BPM.Web.Content\bin\EleWise.ELMA.BPM.Web.Content.dll</HintPath>
+    <Reference Include="EleWise.ELMA.SDK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cb29d04eca9b031d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\program files (x86)\microsoft visual studio\2019\community\common7\ide\extensions\wsmd54yb.dqu\EleWise.ELMA.SDK.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="EleWise.ELMA.BPM.Web.Security">
-      <HintPath>C:\ELMA3-Standart\Web\Modules\EleWise.ELMA.BPM.Web.Security\bin\EleWise.ELMA.BPM.Web.Security.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="EleWise.ELMA.Common">
-      <HintPath>C:\ELMA3-Standart\Web\bin\EleWise.ELMA.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="EleWise.ELMA.Content">
-      <HintPath>C:\ELMA3-Standart\Web\bin\EleWise.ELMA.Content.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="EleWise.ELMA.SDK">
-      <HintPath>..\..\..\..\..\..\..\program files (x86)\microsoft visual studio\2017\professional\common7\ide\extensions\sf2jo0vz.kto\EleWise.ELMA.SDK.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="EleWise.ELMA.SDK.Web">
+    <Reference Include="EleWise.ELMA.SDK.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cb29d04eca9b031d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\ELMA3-Standart\Designer\EleWise.ELMA.SDK.Web.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="EleWise.ELMA.Security">
-      <HintPath>C:\ELMA3-Standart\Web\bin\EleWise.ELMA.Security.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\ELMA3-Standart\Designer\EleWise.ELMA.Security.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.Web.Mvc">

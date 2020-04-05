@@ -247,7 +247,6 @@
         </Attributes>
       </ViewSettings>
       <Order>6</Order>
-      <Filterable>true</Filterable>
     </PropertyMetadata>
   </Properties>
   <FormsScheme>FormConstructor</FormsScheme>

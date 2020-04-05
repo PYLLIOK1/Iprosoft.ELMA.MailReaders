@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Uid>e3cce157-5df1-4021-9ed9-1d60ef25a92f</Uid>
-  <Name>MailRequestI</Name>
-  <DisplayName>E-mail запрос</DisplayName>
+  <Uid>6648633a-d6f5-495c-a675-38fcb6b9258f</Uid>
+  <Name>EMailMessageI</Name>
+  <DisplayName>EMailMessageI</DisplayName>
   <Namespace>Iprosoft.ELMA.MailReaderConf.Models</Namespace>
   <Properties>
     <PropertyMetadata xsi:type="EntityPropertyMetadata">
-      <Uid>d47c3d20-33d8-4900-b73b-ec5449c3b566</Uid>
+      <Uid>9ab435f1-883c-4c43-9789-7488c827118e</Uid>
       <Name>Uid</Name>
       <DisplayName>Уникальный идентификатор</DisplayName>
       <TypeUid>eb6e8ddc-fafe-4e0e-9018-1a7667012579</TypeUid>
@@ -26,13 +26,12 @@
       <Order>0</Order>
     </PropertyMetadata>
     <PropertyMetadata xsi:type="EntityPropertyMetadata">
-      <Uid>d8b25adc-a344-41e1-8764-52c2dfd468de</Uid>
+      <Uid>1a2c3b3f-22f7-46db-93e2-218dfdac60c4</Uid>
       <Name>Name</Name>
       <DisplayName>Наименование</DisplayName>
       <TypeUid>9b9aac17-22bb-425c-aa93-9c02c5146965</TypeUid>
       <Settings xsi:type="StringSettings">
         <FieldName>Name</FieldName>
-        <DefaultValue>name</DefaultValue>
       </Settings>
       <Nullable>false</Nullable>
       <Required>true</Required>
@@ -51,9 +50,6 @@
           <ViewAttribute>
             <ViewType>List</ViewType>
           </ViewAttribute>
-          <ViewAttribute>
-            <ViewType>Filter</ViewType>
-          </ViewAttribute>
         </Attributes>
       </ViewSettings>
       <Order>1</Order>
@@ -61,7 +57,7 @@
       <Filterable>true</Filterable>
     </PropertyMetadata>
     <PropertyMetadata xsi:type="EntityPropertyMetadata">
-      <Uid>9cfebdbc-7433-436d-955c-28039439cd59</Uid>
+      <Uid>9f11e44a-182c-494a-b92a-10e92b2c47bd</Uid>
       <Name>CreationDate</Name>
       <DisplayName>Дата создания</DisplayName>
       <TypeUid>dac9211e-e02b-47cd-8868-89a3bfc0f749</TypeUid>
@@ -99,130 +95,12 @@
       <Filterable>true</Filterable>
     </PropertyMetadata>
     <PropertyMetadata xsi:type="EntityPropertyMetadata">
-      <Uid>452b64cc-16b6-4c03-aefa-e8a3fe28b173</Uid>
-      <Name>CreationAuthor</Name>
-      <DisplayName>Автор создания</DisplayName>
-      <TypeUid>72ed98ca-f260-4671-9bcd-ff1d80235f47</TypeUid>
-      <SubTypeUid>cfdeb03c-35e9-45e7-aad8-037d83888f73</SubTypeUid>
-      <Settings xsi:type="EntityUserSettings">
-        <FieldName>CreationAuthor</FieldName>
-      </Settings>
-      <Nullable>true</Nullable>
-      <ViewSettings>
-        <Attributes>
-          <ViewAttribute>
-            <ViewType>Create</ViewType>
-            <Visibility>Hidden</Visibility>
-          </ViewAttribute>
-          <ViewAttribute>
-            <ViewType>Edit</ViewType>
-            <ReadOnly>true</ReadOnly>
-          </ViewAttribute>
-          <ViewAttribute>
-            <ViewType>Display</ViewType>
-            <ReadOnly>true</ReadOnly>
-          </ViewAttribute>
-          <ViewAttribute>
-            <ViewType>List</ViewType>
-            <Visibility>Hidden</Visibility>
-          </ViewAttribute>
-        </Attributes>
-      </ViewSettings>
-      <Order>3</Order>
-      <Handlers>
-        <PropertyHandlerInfo>
-          <HandlerUid>b05ac6bd-eb8b-474a-a796-b53831a9967e</HandlerUid>
-        </PropertyHandlerInfo>
-      </Handlers>
-      <Filterable>true</Filterable>
-    </PropertyMetadata>
-    <PropertyMetadata xsi:type="EntityPropertyMetadata">
-      <Uid>46225b35-9e82-4914-97ff-0d12964f597d</Uid>
-      <Name>ChangeDate</Name>
-      <DisplayName>Дата изменения</DisplayName>
-      <TypeUid>dac9211e-e02b-47cd-8868-89a3bfc0f749</TypeUid>
-      <Settings xsi:type="DateTimeSettings">
-        <FieldName>ChangeDate</FieldName>
-      </Settings>
-      <Nullable>true</Nullable>
-      <ViewSettings>
-        <Attributes>
-          <ViewAttribute>
-            <ViewType>Create</ViewType>
-            <Visibility>Hidden</Visibility>
-          </ViewAttribute>
-          <ViewAttribute>
-            <ViewType>Edit</ViewType>
-            <ReadOnly>true</ReadOnly>
-          </ViewAttribute>
-          <ViewAttribute>
-            <ViewType>Display</ViewType>
-            <ReadOnly>true</ReadOnly>
-          </ViewAttribute>
-          <ViewAttribute>
-            <ViewType>List</ViewType>
-            <Visibility>Hidden</Visibility>
-          </ViewAttribute>
-        </Attributes>
-      </ViewSettings>
-      <Order>4</Order>
-      <Handlers>
-        <PropertyHandlerInfo>
-          <HandlerUid>12a6c5c4-12f8-4b2e-b7ea-5438974a2d25</HandlerUid>
-        </PropertyHandlerInfo>
-      </Handlers>
-      <Filterable>true</Filterable>
-    </PropertyMetadata>
-    <PropertyMetadata xsi:type="EntityPropertyMetadata">
-      <Uid>2132b9e8-3f9a-4ef0-a961-03c98c24dfa4</Uid>
-      <Name>ChangeAuthor</Name>
-      <DisplayName>Автор изменения</DisplayName>
-      <TypeUid>72ed98ca-f260-4671-9bcd-ff1d80235f47</TypeUid>
-      <SubTypeUid>cfdeb03c-35e9-45e7-aad8-037d83888f73</SubTypeUid>
-      <Settings xsi:type="EntityUserSettings">
-        <FieldName>ChangeAuthor</FieldName>
-      </Settings>
-      <Nullable>true</Nullable>
-      <ViewSettings>
-        <Attributes>
-          <ViewAttribute>
-            <ViewType>Create</ViewType>
-            <Visibility>Hidden</Visibility>
-          </ViewAttribute>
-          <ViewAttribute>
-            <ViewType>Edit</ViewType>
-            <ReadOnly>true</ReadOnly>
-          </ViewAttribute>
-          <ViewAttribute>
-            <ViewType>Display</ViewType>
-            <ReadOnly>true</ReadOnly>
-          </ViewAttribute>
-          <ViewAttribute>
-            <ViewType>List</ViewType>
-            <Visibility>Hidden</Visibility>
-          </ViewAttribute>
-        </Attributes>
-      </ViewSettings>
-      <Order>5</Order>
-      <Handlers>
-        <PropertyHandlerInfo>
-          <HandlerUid>d152e660-1ee9-4b5f-a614-df280e5b3f98</HandlerUid>
-        </PropertyHandlerInfo>
-      </Handlers>
-      <Filterable>true</Filterable>
-    </PropertyMetadata>
-    <PropertyMetadata xsi:type="EntityPropertyMetadata">
-      <Uid>f19d4133-ce78-47e5-81b4-cd45553a8184</Uid>
-      <Name>Pisjma</Name>
-      <DisplayName>Письма</DisplayName>
-      <TypeUid>72ed98ca-f260-4671-9bcd-ff1d80235f47</TypeUid>
-      <SubTypeUid>6648633a-d6f5-495c-a675-38fcb6b9258f</SubTypeUid>
-      <Settings xsi:type="EntitySettings">
-        <RelationType>ManyToMany</RelationType>
-        <RelationTableName>M_MailRequestI_Pisjma</RelationTableName>
-        <ParentColumnName>Parent</ParentColumnName>
-        <ChildColumnName>Child</ChildColumnName>
-        <CascadeMode>SaveUpdate</CascadeMode>
+      <Uid>8f7d2515-666e-45d5-bb3f-4ec0d2717550</Uid>
+      <Name>Tema</Name>
+      <DisplayName>Тема</DisplayName>
+      <TypeUid>9b9aac17-22bb-425c-aa93-9c02c5146965</TypeUid>
+      <Settings xsi:type="StringSettings">
+        <FieldName>Tema</FieldName>
       </Settings>
       <Nullable>true</Nullable>
       <ViewSettings>
@@ -246,126 +124,224 @@
           </ViewAttribute>
         </Attributes>
       </ViewSettings>
+      <Order>3</Order>
+    </PropertyMetadata>
+    <PropertyMetadata xsi:type="EntityPropertyMetadata">
+      <Uid>5e2c97a5-0750-4962-84e3-b708cc3816df</Uid>
+      <Name>Soobschenie</Name>
+      <DisplayName>Сообщение</DisplayName>
+      <TypeUid>317e3d72-9c47-4b68-926d-ba77a2579bc2</TypeUid>
+      <Settings xsi:type="TextSettings">
+        <FieldName>Soobschenie</FieldName>
+        <MultiLine>true</MultiLine>
+      </Settings>
+      <Nullable>true</Nullable>
+      <ViewSettings>
+        <Attributes>
+          <ViewAttribute>
+            <ViewType>Create</ViewType>
+          </ViewAttribute>
+          <ViewAttribute>
+            <ViewType>Edit</ViewType>
+          </ViewAttribute>
+          <ViewAttribute>
+            <ViewType>Display</ViewType>
+            <ReadOnly>true</ReadOnly>
+          </ViewAttribute>
+          <ViewAttribute>
+            <ViewType>List</ViewType>
+            <Visibility>Hidden</Visibility>
+          </ViewAttribute>
+          <ViewAttribute>
+            <ViewType>Filter</ViewType>
+          </ViewAttribute>
+        </Attributes>
+      </ViewSettings>
+      <Order>4</Order>
+    </PropertyMetadata>
+    <PropertyMetadata xsi:type="EntityPropertyMetadata">
+      <Uid>ace29bdd-0b0d-4f68-8844-31e89d0bf968</Uid>
+      <Name>OtKogo</Name>
+      <DisplayName>От кого</DisplayName>
+      <TypeUid>9b9aac17-22bb-425c-aa93-9c02c5146965</TypeUid>
+      <Settings xsi:type="StringSettings">
+        <FieldName>OtKogo</FieldName>
+      </Settings>
+      <Nullable>true</Nullable>
+      <ViewSettings>
+        <Attributes>
+          <ViewAttribute>
+            <ViewType>Create</ViewType>
+          </ViewAttribute>
+          <ViewAttribute>
+            <ViewType>Edit</ViewType>
+          </ViewAttribute>
+          <ViewAttribute>
+            <ViewType>Display</ViewType>
+            <ReadOnly>true</ReadOnly>
+          </ViewAttribute>
+          <ViewAttribute>
+            <ViewType>List</ViewType>
+            <Visibility>Hidden</Visibility>
+          </ViewAttribute>
+          <ViewAttribute>
+            <ViewType>Filter</ViewType>
+          </ViewAttribute>
+        </Attributes>
+      </ViewSettings>
+      <Order>5</Order>
+    </PropertyMetadata>
+    <PropertyMetadata xsi:type="EntityPropertyMetadata">
+      <Uid>d27d3e5c-2173-4c2d-847f-259a498db8d0</Uid>
+      <Name>DataPolucheniePisjma</Name>
+      <DisplayName>Дата получение письма</DisplayName>
+      <TypeUid>dac9211e-e02b-47cd-8868-89a3bfc0f749</TypeUid>
+      <Settings xsi:type="DateTimeSettings">
+        <FieldName>DataPolucheniePisjma</FieldName>
+      </Settings>
+      <Nullable>false</Nullable>
+      <ViewSettings>
+        <Attributes>
+          <ViewAttribute>
+            <ViewType>Create</ViewType>
+          </ViewAttribute>
+          <ViewAttribute>
+            <ViewType>Edit</ViewType>
+          </ViewAttribute>
+          <ViewAttribute>
+            <ViewType>Display</ViewType>
+            <ReadOnly>true</ReadOnly>
+          </ViewAttribute>
+          <ViewAttribute>
+            <ViewType>List</ViewType>
+            <Visibility>Hidden</Visibility>
+          </ViewAttribute>
+          <ViewAttribute>
+            <ViewType>Filter</ViewType>
+          </ViewAttribute>
+        </Attributes>
+      </ViewSettings>
       <Order>6</Order>
-      <Filterable>true</Filterable>
     </PropertyMetadata>
   </Properties>
   <FormsScheme>FormConstructor</FormsScheme>
   <DefaultForms>
-    <CreateUid>31692e31-47ff-47e3-af60-336de03d092a</CreateUid>
-    <EditUid>31692e31-47ff-47e3-af60-336de03d092a</EditUid>
-    <DisplayUid>f03f355f-26fe-49b8-b1e8-cf5746f5512a</DisplayUid>
+    <CreateUid>e2ea92ca-102e-4f56-80dd-7da212efc216</CreateUid>
+    <EditUid>e2ea92ca-102e-4f56-80dd-7da212efc216</EditUid>
+    <DisplayUid>82fea08d-ec27-4e17-9f0d-70ac59e21e01</DisplayUid>
   </DefaultForms>
   <Forms>
     <FormViewItem>
       <Name>Form</Name>
-      <Uid>31692e31-47ff-47e3-af60-336de03d092a</Uid>
+      <Uid>e2ea92ca-102e-4f56-80dd-7da212efc216</Uid>
       <Items>
         <RootViewItem xsi:type="ColumnsLayoutViewItem">
           <Name>ColumnsLayout1</Name>
-          <Uid>61e01ea4-c21a-4990-a5c1-1178eef77c03</Uid>
+          <Uid>ce5a42a3-2371-4e45-802a-37db8b5a493e</Uid>
           <Items>
             <RootViewItem xsi:type="ColumnViewItem">
               <Name>Column1</Name>
-              <Uid>ccde8ca1-edf2-47a2-918c-d2b56ea643f2</Uid>
+              <Uid>2651539b-6d2b-4705-923e-eddc01954df9</Uid>
               <Items>
                 <RootViewItem xsi:type="PropertyViewItem">
                   <Name>Property1</Name>
-                  <Uid>a1602530-5a85-449a-9e46-46bc952d23db</Uid>
-                  <Property>d8b25adc-a344-41e1-8764-52c2dfd468de</Property>
+                  <Uid>e8413370-6511-45a0-89d4-abe94378b212</Uid>
+                  <Property>1a2c3b3f-22f7-46db-93e2-218dfdac60c4</Property>
                   <Attributes />
                 </RootViewItem>
                 <RootViewItem xsi:type="PropertyViewItem">
                   <Name>Property2</Name>
-                  <Uid>4412de7f-c7a8-4be5-83cd-ebc0b56fbcdc</Uid>
-                  <Property>9cfebdbc-7433-436d-955c-28039439cd59</Property>
+                  <Uid>cb917ad1-c842-4cda-a504-88a42657ffc1</Uid>
+                  <Property>9f11e44a-182c-494a-b92a-10e92b2c47bd</Property>
                   <Attributes />
                 </RootViewItem>
                 <RootViewItem xsi:type="PropertyViewItem">
                   <Name>Property3</Name>
-                  <Uid>5c6e26c3-947a-4fe1-ab81-e2b987d334e3</Uid>
-                  <Property>452b64cc-16b6-4c03-aefa-e8a3fe28b173</Property>
+                  <Uid>3d42a611-4472-4d19-9991-a5cd7d1fc883</Uid>
+                  <Property>8f7d2515-666e-45d5-bb3f-4ec0d2717550</Property>
                   <Attributes />
-                  <TypeSettings>
-                    <item key="HideCreator">
-                      <anyType xsi:type="xsd:boolean">true</anyType>
-                    </item>
-                  </TypeSettings>
+                </RootViewItem>
+                <RootViewItem xsi:type="PropertyViewItem">
+                  <Name>Property4</Name>
+                  <Uid>4bb51df9-7cf8-43f9-8244-b1709e311846</Uid>
+                  <Property>5e2c97a5-0750-4962-84e3-b708cc3816df</Property>
+                  <Attributes />
+                </RootViewItem>
+                <RootViewItem xsi:type="PropertyViewItem">
+                  <Name>Property5</Name>
+                  <Uid>7989735c-3f17-4d1d-8f07-ff11949c63d8</Uid>
+                  <Property>ace29bdd-0b0d-4f68-8844-31e89d0bf968</Property>
+                  <Attributes />
                 </RootViewItem>
                 <RootViewItem xsi:type="PropertyViewItem">
                   <Name>Property6</Name>
-                  <Uid>82818460-2408-445d-8f58-6bf891c9577d</Uid>
-                  <Property>f19d4133-ce78-47e5-81b4-cd45553a8184</Property>
+                  <Uid>74cb8e1c-4c5d-4a62-a197-c7d2c09574db</Uid>
+                  <Property>d27d3e5c-2173-4c2d-847f-259a498db8d0</Property>
                   <Attributes />
-                  <TypeSettings>
-                    <item key="HideCreator">
-                      <anyType xsi:type="xsd:boolean">true</anyType>
-                    </item>
-                  </TypeSettings>
                 </RootViewItem>
               </Items>
             </RootViewItem>
           </Items>
         </RootViewItem>
       </Items>
-      <DisplayName>Создание</DisplayName>
+      <DisplayName>Создание\Редактирование</DisplayName>
     </FormViewItem>
     <FormViewItem>
       <Name>Form</Name>
-      <Uid>f03f355f-26fe-49b8-b1e8-cf5746f5512a</Uid>
+      <Uid>82fea08d-ec27-4e17-9f0d-70ac59e21e01</Uid>
       <Items>
         <RootViewItem xsi:type="ColumnsLayoutViewItem">
           <Name>ColumnsLayout1</Name>
-          <Uid>26d0ab1a-3354-4890-9be0-196ed09e9654</Uid>
+          <Uid>a78a2c99-a674-495b-a901-bb720db536b3</Uid>
           <Items>
             <RootViewItem xsi:type="ColumnViewItem">
               <Name>Column1</Name>
-              <Uid>c0fd53c9-f9d1-442d-92a8-bdee49904b2d</Uid>
+              <Uid>b502f679-36be-47af-9d95-b42755bb553a</Uid>
               <Items>
                 <RootViewItem xsi:type="PropertyViewItem">
                   <Name>Property1</Name>
-                  <Uid>03a201dc-6f64-4913-8cf4-46ddbecd8016</Uid>
-                  <Property>d8b25adc-a344-41e1-8764-52c2dfd468de</Property>
+                  <Uid>ff46b5b6-bf0e-4de6-ba16-ad4a1409afb7</Uid>
+                  <Property>1a2c3b3f-22f7-46db-93e2-218dfdac60c4</Property>
                   <Attributes>
                     <ReadOnly>true</ReadOnly>
                   </Attributes>
                 </RootViewItem>
                 <RootViewItem xsi:type="PropertyViewItem">
                   <Name>Property2</Name>
-                  <Uid>68394966-1a62-4789-a1a7-f818c433c635</Uid>
-                  <Property>9cfebdbc-7433-436d-955c-28039439cd59</Property>
+                  <Uid>683a47e3-297e-49c5-85ac-4295b5a0a451</Uid>
+                  <Property>9f11e44a-182c-494a-b92a-10e92b2c47bd</Property>
                   <Attributes>
                     <ReadOnly>true</ReadOnly>
                   </Attributes>
                 </RootViewItem>
                 <RootViewItem xsi:type="PropertyViewItem">
                   <Name>Property3</Name>
-                  <Uid>5851eac4-5a71-4bb4-9be0-81765fba6ea8</Uid>
-                  <Property>452b64cc-16b6-4c03-aefa-e8a3fe28b173</Property>
+                  <Uid>ddd9cb07-9e9f-4ef4-9c97-bb840b2bd4c2</Uid>
+                  <Property>8f7d2515-666e-45d5-bb3f-4ec0d2717550</Property>
                   <Attributes>
                     <ReadOnly>true</ReadOnly>
                   </Attributes>
                 </RootViewItem>
                 <RootViewItem xsi:type="PropertyViewItem">
                   <Name>Property4</Name>
-                  <Uid>8bb42a46-6084-471f-af4e-b8c125add310</Uid>
-                  <Property>46225b35-9e82-4914-97ff-0d12964f597d</Property>
+                  <Uid>ea3acbc1-eb89-43c2-a775-915bb240a07e</Uid>
+                  <Property>5e2c97a5-0750-4962-84e3-b708cc3816df</Property>
                   <Attributes>
                     <ReadOnly>true</ReadOnly>
                   </Attributes>
                 </RootViewItem>
                 <RootViewItem xsi:type="PropertyViewItem">
                   <Name>Property5</Name>
-                  <Uid>496a763f-941b-4abf-b2ec-d7701037e24d</Uid>
-                  <Property>2132b9e8-3f9a-4ef0-a961-03c98c24dfa4</Property>
+                  <Uid>d2a87dda-1134-4b2d-9e33-2baa52a8bb43</Uid>
+                  <Property>ace29bdd-0b0d-4f68-8844-31e89d0bf968</Property>
                   <Attributes>
                     <ReadOnly>true</ReadOnly>
                   </Attributes>
                 </RootViewItem>
                 <RootViewItem xsi:type="PropertyViewItem">
                   <Name>Property6</Name>
-                  <Uid>f1f86ec5-69d3-4459-9d3f-c7609d6f75c6</Uid>
-                  <Property>f19d4133-ce78-47e5-81b4-cd45553a8184</Property>
+                  <Uid>c3b0c007-28c2-45ee-b058-48a7b76de1f6</Uid>
+                  <Property>d27d3e5c-2173-4c2d-847f-259a498db8d0</Property>
                   <Attributes>
                     <ReadOnly>true</ReadOnly>
                   </Attributes>
@@ -406,15 +382,15 @@
   </FormViews>
   <TableViews>
     <TableView>
-      <Uid>89787f32-7c42-4f27-8426-76b082e6add4</Uid>
+      <Uid>87c0a569-da23-424d-8107-24331f7b496a</Uid>
       <ViewType>List</ViewType>
     </TableView>
   </TableViews>
-  <TitlePropertyUid>d8b25adc-a344-41e1-8764-52c2dfd468de</TitlePropertyUid>
+  <TitlePropertyUid>1a2c3b3f-22f7-46db-93e2-218dfdac60c4</TitlePropertyUid>
   <Type>Interface</Type>
-  <ImplementationUid>f1286452-cfe8-49a1-a4a2-f48232234142</ImplementationUid>
+  <ImplementationUid>fd5eb2d5-531c-4042-92aa-c40565928707</ImplementationUid>
   <IdTypeUid>d90a59af-7e47-48c5-8c4c-dad04834e6e3</IdTypeUid>
-  <TableName>MailRequestI</TableName>
+  <TableName>EMailMessageI</TableName>
   <IsSoftDeletable>true</IsSoftDeletable>
   <SaveHistory>true</SaveHistory>
   <ShowInCatalogList>true</ShowInCatalogList>

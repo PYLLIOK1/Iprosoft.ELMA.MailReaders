@@ -63,6 +63,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -88,6 +89,7 @@
     <Compile Include="MailReadersSettings.cs" />
     <Compile Include="MailReadersSettingsModule.cs" />
     <Compile Include="ProjectAssemblyInfo.cs" />
+    <Compile Include="Schedulers\MailReadersScheduler.cs" />
     <Compile Include="Services\IMailReadersService.cs" />
     <Compile Include="Services\Impl\MailReadersService.cs" />
   </ItemGroup>
@@ -99,7 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Iprosoft.ELMA.MailReaderConf\Iprosoft.ELMA.MailReaderConf\Iprosoft.ELMA.MailReaderConf.csproj">
-      <Project>{238270FD-67E3-4352-B440-2FB185C12C48}</Project>
+      <Project>{238270fd-67e3-4352-b440-2fb185c12c48}</Project>
       <Name>Iprosoft.ELMA.MailReaderConf</Name>
     </ProjectReference>
   </ItemGroup>

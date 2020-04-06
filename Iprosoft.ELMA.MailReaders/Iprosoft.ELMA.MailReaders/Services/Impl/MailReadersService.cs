@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using EleWise.ELMA.ComponentModel;
 using EleWise.ELMA.Model.Managers;
 using EleWise.ELMA.Security;
+using EleWise.ELMA.Workflow.Managers;
 using Iprosoft.ELMA.MailReaderConf.Models;
 using MailKit;
 using MailKit.Net.Imap;
@@ -78,6 +79,23 @@ namespace Iprosoft.ELMA.MailReaders.Services.Impl
         public void Method()
         {
             throw new NotImplementedException();
+        }
+
+        public void RunProcessesMailMassages(IMailRequestI mailRequest)
+        {
+            if (MailReaderSettingsModule.Settings.MailProcess != null)
+                if (MailReaderSettingsModule.Settings.MailProcess.Published != null)
+                {
+                    WorkflowInstanceManager.Instance.StartProcess(
+                    MailReaderSettingsModule.Settings.MailProcess.Published,
+                    "Процесс обработки писем от " + DateTime.Today.ToString(),
+                    new
+                    {
+                        Request = mailRequest
+                    });
+                }
+
+
         }
     }
 }

@@ -27,5 +27,7 @@ namespace Iprosoft.ELMA.MailReaders.Services
         /// Interceptors the method.
         /// </summary>
         void Method();
+
+        void RunProcessesMailMassages(IMailRequestI mailRequest);
     }
 }

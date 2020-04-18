@@ -46,6 +46,9 @@
       <HintPath>C:\ELMA3-Standart\Designer\Iesi.Collections.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\..\..\..\..\ELMA3-Standart\Web\bin\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -77,6 +80,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyInfo.md</DependentUpon>
     </Compile>
+    <Compile Include="Db\ConfigurationDbStructure.cs" />
     <Compile Include="Models\EMailMessageI.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +121,9 @@
     <EmbeddedResource Include="Models\EMailMessageI.Form.Form1.xml">
       <DependentUpon>EMailMessageI.md</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Db\ConfigurationDbStructure.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

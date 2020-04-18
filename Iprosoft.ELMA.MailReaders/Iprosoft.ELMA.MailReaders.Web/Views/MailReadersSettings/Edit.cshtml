@@ -2,9 +2,11 @@
 
 @using (Html.TableForm(v => v.ViewType(EleWise.ELMA.Model.Views.ViewType.Edit).Attributes(a => a.@class = "settings_table")))
 {
+    @Html.EditableProperty(m => m.AdressApi)
     @Html.EditableProperty(m => m.IMAP)
     @Html.EditableProperty(m => m.IMAPport)
     @Html.EditableProperty(m => m.Login)
     @Html.EditableProperty(m => m.Password)
     @Html.EditableProperty(m => m.MailProcess)
+    @Html.EditableProperty(m => m.MailProcessApi)
 }

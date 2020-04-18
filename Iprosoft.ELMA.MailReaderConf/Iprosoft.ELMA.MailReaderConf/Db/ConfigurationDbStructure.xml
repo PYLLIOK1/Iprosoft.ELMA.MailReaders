@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root uid="{3CB52F08-9A57-45F2-A64D-360D978E9443}">
+  <methods>
+    <method ExecuteTime="OnIndexesCreated" AlwaysExecute="true" name="CreateEmailMessageITemaIndexes" />
+  </methods>
+  <procedures>
+    <procedure name="CreateEmailMessageI">
+      <mappings>
+        <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+          <sql-query name="ExecCreateEmailMessageI">
+            <query-param name="Name" type="string" />
+            <query-param name="CreationDate" type="datetime" />
+            <query-param name="Tema" type="string" />
+            <query-param name="Soobschenie" type="string" />
+            <query-param name="DataPolucheniePisjma" type="datetime" />
+            <query-param name="OtKogo" type="string" />
+            <return-scalar column="id" type="long"/>
+            exec CreateEmailMessageI @Name = :Name, @CreationDate = :CreationDate, @Tema = :Tema, @Soobschenie = :Soobschenie, @DataPolucheniePisjma = :DataPolucheniePisjma, @OtKogo = :OtKogo
+          </sql-query>
+        </hibernate-mapping>
+      </mappings>
+      <text>
+        <![CDATA[
+CREATE PROCEDURE [dbo].[CreateEmailMessageI]
+(
+@Name nvarchar(max),
+@CreationDate datetime,
+@Tema nvarchar(200),
+@Soobschenie nvarchar(max),
+@DataPolucheniePisjma datetime,
+@OtKogo nvarchar(max)
+)
+AS
+BEGIN
+declare @newSeqVal bigint
+declare @currSeqVal bigint
+declare @Uid uniqueidentifier
+
+--Получить новый Id
+exec G_GenId 'EMailMessage', 1, @currSeqVal output, @newSeqVal output
+
+--Сгенерировать UId для записи
+set @Uid = NEWID()
+
+
+Insert Into EMailMessageI([Id],[Uid],[Name],[CreationDate], [Tema], [Soobschenie],[DataPolucheniePisjma], [OtKogo]) VALUES (@newSeqVal, @Uid , @Name, @CreationDate, @Tema, @Soobschenie, @DataPolucheniePisjma, @OtKogo)
+select * from EMailMessageI Where Id = @newSeqVal
+END
+        ]]>
+      </text>
+    </procedure>
+  </procedures>
+</root>

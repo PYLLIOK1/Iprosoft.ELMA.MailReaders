@@ -7,6 +7,9 @@ namespace Iprosoft.ELMA.MailReaders
 {
     public class MailReadersSettings : GlobalSettingsBase
     {
+        [DisplayName("Адрес api")]
+        public string AdressApi { get; set; }
+
         [DisplayName("IMAP сервер")]
         public string IMAP { get; set; }
 
@@ -30,5 +33,15 @@ namespace Iprosoft.ELMA.MailReaders
         }
         public long? MailProcessId { get; set; }
 
+        [DisplayName("Процесс обработки писем через api")]
+        public IProcessHeader MailProcessApi
+        {
+            get =>
+                MailProcessApiId.HasValue
+                    ? ProcessHeaderManager.Instance.LoadOrNull(MailProcessApiId.Value)
+                    : null;
+            set => MailProcessApiId = value?.Id;
+        }
+        public long? MailProcessApiId { get; set; }
     }
 }

@@ -59,6 +59,13 @@
     <Reference Include="MimeKit, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MimeKit.2.0.0\lib\net45\MimeKit.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\ELMA3-Standart\Web\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\..\..\..\..\ELMA3-Standart\Web\bin\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -88,7 +95,9 @@
     </Compile>
     <Compile Include="MailReadersSettings.cs" />
     <Compile Include="MailReadersSettingsModule.cs" />
+    <Compile Include="Managers\EmailMessageIManager.cs" />
     <Compile Include="ProjectAssemblyInfo.cs" />
+    <Compile Include="Schedulers\MailReadersApiScheduler.cs" />
     <Compile Include="Schedulers\MailReadersScheduler.cs" />
     <Compile Include="Services\IMailReadersService.cs" />
     <Compile Include="Services\Impl\MailReadersService.cs" />
@@ -96,7 +105,6 @@
   <ItemGroup>
     <Folder Include="Components\" />
     <Folder Include="Exceptions\" />
-    <Folder Include="Managers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

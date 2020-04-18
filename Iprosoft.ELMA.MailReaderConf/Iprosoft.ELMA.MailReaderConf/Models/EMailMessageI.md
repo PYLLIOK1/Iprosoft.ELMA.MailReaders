@@ -101,6 +101,7 @@
       <TypeUid>9b9aac17-22bb-425c-aa93-9c02c5146965</TypeUid>
       <Settings xsi:type="StringSettings">
         <FieldName>Tema</FieldName>
+        <MaxValue>200</MaxValue>
       </Settings>
       <Nullable>true</Nullable>
       <ViewSettings>

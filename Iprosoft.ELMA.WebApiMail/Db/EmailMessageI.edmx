@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище ELMA3Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EMailMessageI">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="Uid" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="Tema" Type="nvarchar" MaxLength="200" />
+          <Property Name="Soobschenie" Type="nvarchar(max)" />
+          <Property Name="OtKogo" Type="nvarchar(max)" />
+          <Property Name="DataPolucheniePisjma" Type="datetime" />
+        </EntityType>
+        <Function Name="CreateEmailMessageI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="CreationDate" Type="datetime" Mode="In" />
+          <Parameter Name="Tema" Type="nvarchar" Mode="In" />
+          <Parameter Name="Soobschenie" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="DataPolucheniePisjma" Type="datetime" Mode="In" />
+          <Parameter Name="OtKogo" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <EntityContainer Name="Хранилище ELMA3ModelContainer">
+          <EntitySet Name="EMailMessageI" EntityType="Self.EMailMessageI" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ELMA3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EMailMessageI">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="Uid" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="Tema" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Soobschenie" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OtKogo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DataPolucheniePisjma" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="ELMA3Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EMailMessageI" EntityType="Self.EMailMessageI" />
+          <FunctionImport Name="CreateEmailMessageI" ReturnType="Collection(ELMA3Model.CreateEmailMessageI_Result)">
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="CreationDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Tema" Mode="In" Type="String" />
+            <Parameter Name="Soobschenie" Mode="In" Type="String" />
+            <Parameter Name="DataPolucheniePisjma" Mode="In" Type="DateTime" />
+            <Parameter Name="OtKogo" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="CreateEmailMessageI_Result">
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="Uid" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" />
+          <Property Type="DateTime" Name="CreationDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Tema" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Soobschenie" Nullable="true" />
+          <Property Type="String" Name="OtKogo" Nullable="true" />
+          <Property Type="DateTime" Name="DataPolucheniePisjma" Nullable="true" Precision="23" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ELMA3ModelContainer" CdmEntityContainer="ELMA3Entities">
+          <EntitySetMapping Name="EMailMessageI">
+            <EntityTypeMapping TypeName="ELMA3Model.EMailMessageI">
+              <MappingFragment StoreEntitySet="EMailMessageI">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Uid" ColumnName="Uid" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="Tema" ColumnName="Tema" />
+                <ScalarProperty Name="Soobschenie" ColumnName="Soobschenie" />
+                <ScalarProperty Name="OtKogo" ColumnName="OtKogo" />
+                <ScalarProperty Name="DataPolucheniePisjma" ColumnName="DataPolucheniePisjma" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="CreateEmailMessageI" FunctionName="Хранилище ELMA3Model.CreateEmailMessageI">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ELMA3Model.CreateEmailMessageI_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Uid" ColumnName="Uid" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="Tema" ColumnName="Tema" />
+                <ScalarProperty Name="Soobschenie" ColumnName="Soobschenie" />
+                <ScalarProperty Name="OtKogo" ColumnName="OtKogo" />
+                <ScalarProperty Name="DataPolucheniePisjma" ColumnName="DataPolucheniePisjma" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
 using EleWise.ELMA.ComponentModel;
 using EleWise.ELMA.Model.Managers;
 using EleWise.ELMA.Security;
@@ -12,6 +12,7 @@ using MailKit;
 using MailKit.Net.Imap;
 using MailKit.Search;
 using MailKit.Security;
+using Newtonsoft.Json;
 
 namespace Iprosoft.ELMA.MailReaders.Services.Impl
 {
@@ -20,15 +21,15 @@ namespace Iprosoft.ELMA.MailReaders.Services.Impl
     {
         public IComponentManager ComponentManager { get; set; }
         public ISecurityService SecurityService { get; set; }
-        public MailReadersSettingsModule MailReaderSettingsModule { get; set; }
+        public MailReadersSettingsModule MailReadersSettingsModule { get; set; }
 
         public IEnumerable<IEMailMessageI> GetReadMailMessages(IMailRequestI mailRequest)
         {
             var mailMessages = new List<IEMailMessageI>();
             using (ImapClient client = new ImapClient())
             {
-                client.Connect(MailReaderSettingsModule.Settings.IMAP, MailReaderSettingsModule.Settings.IMAPport, SecureSocketOptions.SslOnConnect);
-                client.Authenticate(MailReaderSettingsModule.Settings.Login, MailReaderSettingsModule.Settings.Password);
+                client.Connect(MailReadersSettingsModule.Settings.IMAP, MailReadersSettingsModule.Settings.IMAPport, SecureSocketOptions.SslOnConnect);
+                client.Authenticate(MailReadersSettingsModule.Settings.Login, MailReadersSettingsModule.Settings.Password);
                 IMailFolder inbox = client.Inbox;
                 inbox.Open(FolderAccess.ReadOnly);
                 var uids = inbox.Search(SearchQuery.Seen);
@@ -54,8 +55,8 @@ namespace Iprosoft.ELMA.MailReaders.Services.Impl
             var mailMessages = new List<IEMailMessageI>();
             using (ImapClient client = new ImapClient())
             {
-                client.Connect(MailReaderSettingsModule.Settings.IMAP, MailReaderSettingsModule.Settings.IMAPport, SecureSocketOptions.SslOnConnect);
-                client.Authenticate(MailReaderSettingsModule.Settings.Login, MailReaderSettingsModule.Settings.Password);
+                client.Connect(MailReadersSettingsModule.Settings.IMAP, MailReadersSettingsModule.Settings.IMAPport, SecureSocketOptions.SslOnConnect);
+                client.Authenticate(MailReadersSettingsModule.Settings.Login, MailReadersSettingsModule.Settings.Password);
                 IMailFolder inbox = client.Inbox;
                 inbox.Open(FolderAccess.ReadOnly);
                 var uids = inbox.Search(SearchQuery.NotSeen);
@@ -83,19 +84,53 @@ namespace Iprosoft.ELMA.MailReaders.Services.Impl
 
         public void RunProcessesMailMassages(IMailRequestI mailRequest)
         {
-            if (MailReaderSettingsModule.Settings.MailProcess != null)
-                if (MailReaderSettingsModule.Settings.MailProcess.Published != null)
+            if (MailReadersSettingsModule.Settings.MailProcess != null)
+                if (MailReadersSettingsModule.Settings.MailProcess.Published != null)
                 {
                     WorkflowInstanceManager.Instance.StartProcess(
-                    MailReaderSettingsModule.Settings.MailProcess.Published,
+                    MailReadersSettingsModule.Settings.MailProcess.Published,
                     "Процесс обработки писем от " + DateTime.Today.ToString(),
                     new
                     {
                         Request = mailRequest
                     });
                 }
-
-
         }
+
+        public void RunProcessesMailMassagesApi()
+        {
+            List<long> list = new List<long>();
+            WebRequest request = WebRequest.Create(MailReadersSettingsModule.Settings.AdressApi + MailReadersSettingsModule.Settings.IMAP + "/"
+                + MailReadersSettingsModule.Settings.IMAPport + "/" + MailReadersSettingsModule.Settings.Login + "/" + MailReadersSettingsModule.Settings.Password);
+            WebResponse response = request.GetResponse();
+            using (Stream stream = response.GetResponseStream())
+            {
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    list.AddRange(Rootobject.FromJson(reader.ReadToEnd()));
+                }
+            }
+            response.Close();
+            if (MailReadersSettingsModule.Settings.MailProcessApi != null)
+                if (MailReadersSettingsModule.Settings.MailProcessApi.Published != null)
+                {
+                    foreach (var item in list)
+                    {
+                        var Message = EntityManager<IEMailMessageI>.Instance.Load(item);
+                        WorkflowInstanceManager.Instance.StartProcess(
+                        MailReadersSettingsModule.Settings.MailProcessApi.Published,
+                        "Процесс обработки писем через api от " + DateTime.Today.ToString(),
+                        new
+                        {
+                            Pisjmo = Message
+                        });
+                    }
+
+                }
+        }
+    }
+    public class Rootobject
+    {
+        public static long[] FromJson(string json) => JsonConvert.DeserializeObject<long[]>(json);
     }
 }

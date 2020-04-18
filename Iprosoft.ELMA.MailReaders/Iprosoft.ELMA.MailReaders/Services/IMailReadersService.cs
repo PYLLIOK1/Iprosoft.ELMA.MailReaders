@@ -1,9 +1,5 @@
 ﻿using Iprosoft.ELMA.MailReaderConf.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Iprosoft.ELMA.MailReaders.Services
 {
@@ -29,5 +25,7 @@ namespace Iprosoft.ELMA.MailReaders.Services
         void Method();
 
         void RunProcessesMailMassages(IMailRequestI mailRequest);
+
+        void RunProcessesMailMassagesApi();
     }
 }

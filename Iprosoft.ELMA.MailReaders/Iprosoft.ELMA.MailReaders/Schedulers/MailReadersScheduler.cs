@@ -10,6 +10,7 @@ using Iprosoft.ELMA.MailReaders.Services;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 
 namespace Iprosoft.ELMA.MailReaders.Schedulers
 {
@@ -69,6 +70,7 @@ namespace Iprosoft.ELMA.MailReaders.Schedulers
                             var mailReadersService = Locator.GetServiceNotNull<IMailReadersService>();
                             var mailRequest = InterfaceActivator.Create<IMailRequestI>();
                             mailRequest.Name = $"Новый запрос на прочтение почты";
+                            mailRequest.Pisjma.AddAll(mailReadersService.GetUnreadMailMessages(mailRequest));
                             mailReadersService.RunProcessesMailMassages(mailRequest);
                         });
                         return new JobResult

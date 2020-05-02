@@ -49,17 +49,17 @@ namespace Iprosoft.ELMA.MailReaders.Managers
 
         public override void Save(IEMailMessageI obj)
         {
-            var findedEMailMessage = LoadOrNull(GetUniqueGuid(obj));
-            if (obj.IsNew())
-            {
-                if (findedEMailMessage != null)
-                    throw new Exception("Такая запись уже есть!");
-            }
-            else
-            {
-                if (findedEMailMessage != null && obj.Id != findedEMailMessage.Id)
-                    throw new Exception("Такая запись уже есть!");
-            }
+            //var findedEMailMessage = LoadOrNull(GetUniqueGuid(obj));
+            //if (obj.IsNew())
+            //{
+            //    if (findedEMailMessage != null)
+            //        throw new Exception("Такая запись уже есть!");
+            //}
+            //else
+            //{
+            //    if (findedEMailMessage != null && obj.Id != findedEMailMessage.Id)
+            //        throw new Exception("Такая запись уже есть!");
+            //}
             obj.Uid = GetUniqueGuid(obj);
 
             base.Save(obj);

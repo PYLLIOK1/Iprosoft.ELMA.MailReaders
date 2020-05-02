@@ -4,14 +4,19 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using EleWise.ELMA.ComponentModel;
+using EleWise.ELMA.Extensions;
+using EleWise.ELMA.Model.Common;
 using EleWise.ELMA.Model.Managers;
+using EleWise.ELMA.Model.Services;
 using EleWise.ELMA.Security;
 using EleWise.ELMA.Workflow.Managers;
 using Iprosoft.ELMA.MailReaderConf.Models;
+using Iprosoft.ELMA.MailReaders.ExtensionPoints;
 using MailKit;
 using MailKit.Net.Imap;
 using MailKit.Search;
 using MailKit.Security;
+using MimeKit;
 using Newtonsoft.Json;
 
 namespace Iprosoft.ELMA.MailReaders.Services.Impl
@@ -64,13 +69,7 @@ namespace Iprosoft.ELMA.MailReaders.Services.Impl
                 {
                     var message = inbox.GetMessage(item);
                     var mailMessage = EntityManager<IEMailMessageI>.Instance.Create();
-                    mailMessage.Name = DateTime.Now.ToString();
-                    mailMessage.CreationDate = DateTime.Now;
-                    mailMessage.Tema = message.Subject;
-                    mailMessage.Soobschenie = message.HtmlBody;
-                    mailMessage.DataPolucheniePisjma = message.Date.UtcDateTime;
-                    mailMessage.OtKogo = message.From.FirstOrDefault().Name;
-                    mailMessage.Save();
+                    ExecuteEmailMessage(message, mailMessage);
                     mailMessages.Add(mailMessage);
                 }
             }
@@ -112,6 +111,7 @@ namespace Iprosoft.ELMA.MailReaders.Services.Impl
             }
             response.Close();
             if (MailReadersSettingsModule.Settings.MailProcessApi != null)
+            {
                 if (MailReadersSettingsModule.Settings.MailProcessApi.Published != null)
                 {
                     foreach (var item in list)
@@ -125,8 +125,17 @@ namespace Iprosoft.ELMA.MailReaders.Services.Impl
                             Pisjmo = Message
                         });
                     }
-
                 }
+            }         
+        }
+
+        public void ExecuteEmailMessage(MimeMessage message, IEMailMessageI eMail)
+        {
+            //получаем реализации точки расширения
+            var emailMessageHandlers = ComponentManager.GetExtensionPoints<IEmailMessageIHandler>()
+                .Where(c => c.CanExecute(message));
+            //вызываем обработчики
+            emailMessageHandlers.ForEach(c => c.Execute(message,eMail ));
         }
     }
     public class Rootobject

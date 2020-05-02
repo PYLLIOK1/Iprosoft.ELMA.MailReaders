@@ -93,6 +93,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyInfo.md</DependentUpon>
     </Compile>
+    <Compile Include="ExtensionPoints\IEmailMessageIHandler.cs" />
+    <Compile Include="ExtensionPoints\Impl\EmailMessageIHandler\AbstractEmailMessageIHandler.cs" />
+    <Compile Include="ExtensionPoints\Impl\EmailMessageIHandler\BodyEmailMessageIHandler.cs" />
+    <Compile Include="ExtensionPoints\Impl\EmailMessageIHandler\HtmlEmailMessageIHandler.cs" />
     <Compile Include="MailReadersSettings.cs" />
     <Compile Include="MailReadersSettingsModule.cs" />
     <Compile Include="Managers\EmailMessageIManager.cs" />

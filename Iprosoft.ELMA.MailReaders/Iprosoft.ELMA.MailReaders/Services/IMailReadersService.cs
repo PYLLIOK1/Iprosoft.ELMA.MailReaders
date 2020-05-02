@@ -1,4 +1,5 @@
 ﻿using Iprosoft.ELMA.MailReaderConf.Models;
+using MimeKit;
 using System.Collections.Generic;
 
 namespace Iprosoft.ELMA.MailReaders.Services
@@ -27,5 +28,7 @@ namespace Iprosoft.ELMA.MailReaders.Services
         void RunProcessesMailMassages(IMailRequestI mailRequest);
 
         void RunProcessesMailMassagesApi();
+
+        void ExecuteEmailMessage(MimeMessage message, IEMailMessageI eMail);
     }
 }
